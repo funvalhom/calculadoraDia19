@@ -6,24 +6,24 @@ public class Multiplica {
 	Scanner dato = new Scanner(System.in);
 
 	
-	int tamano, mult = 0, temp = 0;
+	double tamano, mult = 0, temp = 0;
 	public void operacionMulti() {
 		
 	System.out.println("¿Cuantos valores desea multiplicar?");
 	tamano = dato.nextInt();
-	int numero[] = new int[tamano];
+	double numero[] = new double[(int) tamano];
 
 	for(int i = 0; i < tamano; i++){
 	    System.out.println(" Valor # " + i + "\nIngrese numero");
-	    numero[i] = dato.nextInt();
+	    numero[i] = dato.nextDouble();
 	    if(i == (tamano - 1)){
 	        temp = numero[i]; 
 	    }
 	} 
 
 	
-	for(int x = (tamano - 2); x >= 0; x--) { 
-		mult =  numero[x]- temp; 
+	for(double x = (tamano - 2); x >= 0; x--) { 
+		mult =  numero[(int) x]- temp; 
 	    temp = mult; 
 	}
 	System.out.println("La multiplicacion es: "+ mult);
